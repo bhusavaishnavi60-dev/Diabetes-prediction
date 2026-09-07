@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+<div class="card">
+
+<h2>{{result}}</h2>
+
+<h3>Prediction Probability</h3>
+
+<h1>{{probability}}%</h1>
+
+<h3>Precautions to Take</h3>
+
+<ul>
+{% for item in precautions %}
+    <li>{{item}}</li>
+{% endfor %}
+</ul>
+
+<a href="/home" class="predict-btn">Predict Again</a>
+
+<br><br>
+
+<a href="/logout" class="logout-btn">Logout</a>
+
+</div>
+</div>
+
+</body>
+</html>

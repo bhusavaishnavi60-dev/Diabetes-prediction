@@ -1,0 +1,124 @@
+/* Background */
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#4facfe,#00c6fb);
+    height:100vh;
+}
+
+/* Center Container */
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* White Card */
+.card{
+    width:420px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+h1{
+    color:#0077b6;
+    text-align:center;
+}
+
+h2,h3{
+    text-align:center;
+    color:#023e8a;
+}
+
+/* Labels */
+label{
+    font-weight:bold;
+    color:#333;
+}
+
+/* Input & Select */
+input, select{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border-radius:8px;
+    border:1px solid #bbb;
+    font-size:15px;
+    box-sizing:border-box;
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:12px;
+    background:#0077b6;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#023e8a;
+}
+
+/* Links */
+.link-btn,
+.predict-btn,
+.logout-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.link-btn{
+    background:#00b4d8;
+}
+
+.predict-btn{
+    background:#38b000;
+}
+
+.logout-btn{
+    background:#d90429;
+}
+
+.link-btn:hover{
+    background:#0096c7;
+}
+
+.predict-btn:hover{
+    background:#2d6a4f;
+}
+
+.logout-btn:hover{
+    background:#9d0208;
+}
+
+/* List */
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+    color:#222;
+    font-size:15px;
+}
+
+/* Paragraph */
+p{
+    text-align:center;
+}
