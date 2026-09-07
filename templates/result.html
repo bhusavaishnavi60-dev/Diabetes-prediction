@@ -2,34 +2,38 @@
 <html>
 <head>
     <title>Prediction Result</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body class="bg">
 
-<div class="container">
-<div class="card">
+<div class="container result-box">
 
-<h2>{{result}}</h2>
+    <h1>{{ result }}</h1>
 
-<h3>Prediction Probability</h3>
+    <h2>Prediction Confidence</h2>
 
-<h1>{{probability}}%</h1>
+    <div class="progress-bar">
+        <div class="progress" style="width:{{ probability }}%;">
+            {{ probability }}%
+        </div>
+    </div>
 
-<h3>Precautions to Take</h3>
+    <h2>🩺 Health Tips & Precautions</h2>
 
-<ul>
-{% for item in precautions %}
-    <li>{{item}}</li>
-{% endfor %}
-</ul>
+    <ul>
+        {% for tip in precautions %}
+        <li>{{ tip }}</li>
+        {% endfor %}
+    </ul>
 
-<a href="/home" class="predict-btn">Predict Again</a>
+    <a href="/home">
+        <button>🔄 Predict Again</button>
+    </a>
 
-<br><br>
+    <a href="/logout">
+        <button class="logout-btn">Logout</button>
+    </a>
 
-<a href="/logout" class="logout-btn">Logout</a>
-
-</div>
 </div>
 
 </body>

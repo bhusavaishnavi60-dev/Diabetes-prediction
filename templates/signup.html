@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create Account</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body class="bg">
+<div class="login-card">
+    <h1>👤 Create Account</h1>
 
-<div class="container">
-    <div class="card">
+    <form method="POST" action="/signup">
+        <input type="text" name="username" placeholder="Choose Username" required>
+        <input type="password" name="password" placeholder="Choose Password" required>
 
-        <h1>🩺 Diabetes Prediction</h1>
-        <h3>Create Account</h3>
+        <button type="submit">Sign Up</button>
+    </form>
 
-        <form method="POST">
-
-            <input type="text"
-                   name="username"
-                   placeholder="Create Username"
-                   required>
-
-            <input type="password"
-                   name="password"
-                   placeholder="Create Password"
-                   required>
-
-            <button type="submit">Create Account</button>
-
-        </form>
-
-        <p>Already have an account?</p>
-
-        <a href="/login" class="link-btn">Login Here</a>
-
-    </div>
+    <p>Already have an account?</p>
+    <a href="/login">Login</a>
 </div>
-
 </body>
 </html>

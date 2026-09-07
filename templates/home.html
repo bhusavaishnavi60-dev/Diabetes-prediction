@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Diabetes Prediction</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Home - Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body class="bg">
 
 <div class="container">
-<div class="card">
 
-<h2>Welcome {{username}}</h2>
+    <h1>🩺 Diabetes Prediction System</h1>
+    <p>Enter Patient Health Details</p>
 
-<h3>Enter Patient Details</h3>
+    <form action="/predict" method="POST">
 
-<form action="/predict" method="POST">
+        <div class="grid">
 
-<label>Gender</label>
-<select name="gender">
-    <option value="Female">Female</option>
-    <option value="Male">Male</option>
-</select>
+            <div>
+                <label>Gender</label>
+                <select name="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
 
-<label>Age</label>
-<input type="number" name="age" required>
+                <label>Age</label>
+                <input type="number" name="age" required>
 
-<label>Hypertension</label>
-<select name="hypertension">
-    <option value="0">No</option>
-    <option value="1">Yes</option>
-</select>
+                <label>Hypertension</label>
+                <select name="hypertension">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
 
-<label>Heart Disease</label>
-<select name="heart_disease">
-    <option value="0">No</option>
-    <option value="1">Yes</option>
-</select>
+                <label>Heart Disease</label>
+                <select name="heart_disease">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
 
-<label>Smoking History</label>
-<select name="smoking_history">
-    <option value="never">Never</option>
-    <option value="current">Current</option>
-    <option value="former">Former</option>
-    <option value="No Info">No Info</option>
-    <option value="ever">Ever</option>
-    <option value="not current">Not Current</option>
-</select>
+            <div>
+                <label>Smoking History</label>
+                <select name="smoking_history">
+                    <option>never</option>
+                    <option>current</option>
+                    <option>former</option>
+                    <option>No Info</option>
+                    <option>ever</option>
+                    <option>not current</option>
+                </select>
 
-<label>BMI</label>
-<input type="number" step="0.1" name="bmi" required>
+                <label>BMI</label>
+                <input type="number" step="0.1" name="bmi" required>
 
-<label>HbA1c Level</label>
-<input type="number" step="0.1" name="HbA1c_level" required>
+                <label>HbA1c Level</label>
+                <input type="number" step="0.1" name="HbA1c_level" required>
 
-<label>Blood Glucose Level</label>
-<input type="number" name="blood_glucose_level" required>
+                <label>Blood Glucose Level</label>
+                <input type="number" name="blood_glucose_level" required>
+            </div>
 
-<button type="submit">Predict Diabetes</button>
+        </div>
 
-</form>
+        <button class="predict-btn">🔍 Predict Diabetes</button>
 
-<br>
+    </form>
 
-<a href="/logout" class="logout-btn">Logout</a>
+    <a href="/logout" class="logout">Logout</a>
 
-</div>
 </div>
 
 </body>

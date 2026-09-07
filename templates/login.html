@@ -1,39 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Diabetes Prediction - Login</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Login - Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body class="bg">
+<div class="login-card">
+    <h1>🩺 Diabetes Prediction</h1>
+    <p>AI & ML Healthcare System</p>
 
-<div class="container">
-    <div class="card">
+    <form method="POST" action="/login">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
 
-        <h1>🩺 Diabetes Prediction</h1>
-        <h3>Login</h3>
+        <button type="submit">Login</button>
+    </form>
 
-        <form method="POST">
-
-            <input type="text"
-                   name="username"
-                   placeholder="Enter Username"
-                   required>
-
-            <input type="password"
-                   name="password"
-                   placeholder="Enter Password"
-                   required>
-
-            <button type="submit">Login</button>
-
-        </form>
-
-        <p>Don't have an account?</p>
-
-        <a href="/signup" class="link-btn">Create Account</a>
-
-    </div>
+    <p>Don't have an account?</p>
+    <a href="/signup">Create Account</a>
 </div>
-
 </body>
 </html>
